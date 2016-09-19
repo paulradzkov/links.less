@@ -1,5 +1,7 @@
 # links.less
 
+[![npm version](https://badge.fury.io/js/links.less.svg)](https://badge.fury.io/js/links.less) [![bower version](https://badge.fury.io/bo/links.less.svg)](https://badge.fury.io/bo/links.less)
+
 Configurable css module for rendering links.
 
 ## Install
