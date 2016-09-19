@@ -1,0 +1,54 @@
+/*! links.less v0.0.1 | MIT License | github.com/paulradzkov/links.less */
+a,
+.link {
+  text-decoration: underline;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+}
+a:link,
+.link:link {
+  color: #0877db;
+  text-decoration-color: rgba(8, 119, 219, 0.3);
+}
+a:visited,
+.link:visited {
+  color: #9108db;
+  text-decoration-color: rgba(145, 8, 219, 0.3);
+}
+a:hover,
+.link:hover {
+  color: #2b9aff;
+  text-decoration-color: rgba(43, 154, 255, 0.3);
+}
+a:visited:hover,
+.link:visited:hover {
+  color: #bc4df8;
+  text-decoration-color: rgba(188, 77, 248, 0.3);
+}
+a:active,
+.link:active {
+  color: #bc4df8;
+  text-decoration-color: rgba(188, 77, 248, 0.3);
+}
+a img:only-child,
+.link img:only-child {
+  vertical-align: top;
+}
+.link:link,
+a:not([class]):link,
+.link:visited,
+a:not([class]):visited {
+  border-radius: 0.125em;
+  transition: color 0.3s ease-out, background-color 0.3s ease-out, border-color 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+.link:hover,
+a:not([class]):hover {
+  transition: color 0s, background-color 0s, border-color 0s, box-shadow 0s;
+}
+.link:focus:not(:hover),
+a:not([class]):focus:not(:hover) {
+  color: #2b9aff;
+  background: rgba(43, 154, 255, 0.2);
+  box-shadow: 0 0 0 0.1875em rgba(43, 154, 255, 0.2);
+  outline: none;
+}

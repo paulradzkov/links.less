@@ -1,0 +1,42 @@
+{
+  "name": "links.less",
+  "homepage": "https://github.com/paulradzkov/links.less",
+  "description": "Typography for naked HTML and Markdown",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/paulradzkov/links.less.git"
+  },
+  "keywords": [
+      "typography",
+      "css",
+      "less",
+      "links",
+      "text",
+      "content"
+    ],
+  "authors": [
+    "Paul Radzkov <radzkov@gmail.com> (http://paulradzkov.com)"
+  ],
+  "license": "MIT",
+  "main": [
+    "links.less"
+  ],
+  "ignore": [
+    "**/.*",
+    "src",
+    "out",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "component.json",
+    "package.json",
+    "docpad.coffee",
+    "Gruntfile.coffee",
+    "contributing.json"
+  ],
+  "dependencies": {
+  }
+}
