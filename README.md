@@ -10,26 +10,26 @@ Configurable css module for rendering links.
 
 or use compiled version from CDN
 
-`https://unpkg.com/links.less@latest/links.css`  
-`https://unpkg.com/links.less@latest/links.min.css`  
-`https://unpkg.com/links.less@latest/links.min.css.map`
+`https://unpkg.com/links.less@0.0.2/links.css`  
+`https://unpkg.com/links.less@0.0.2/links.min.css`  
+`https://unpkg.com/links.less@0.0.2/links.min.css.map`
 
 ## Default settings
 
 ```less
 .links-settings() {
-    @class: link; //you can rename that classname
-    @text-decoration: underline;
-    @roundness: 0.125em;   // default = 2px
-    @focuswidth: 0.1875em; // default = 3px
+    @links-class: link; //you can rename that classname
+    @links-text-decoration: underline;
+    @links-roundness: 0.125em;   // default = 2px
+    @links-focuswidth: 0.1875em; // default = 3px
     //colors
-    @link:          #0877db;
-    @visited:       #9108db;
-    @hover:         #2b9aff;
-    @visitedhover:  #bc4df8;
-    @active:        #bc4df8;
+    @links-link:          #0877db;
+    @links-visited:       #9108db;
+    @links-hover:         #2b9aff;
+    @links-visitedhover:  #bc4df8;
+    @links-active:        #bc4df8;
     //animation
-    @aniduration: .3s; //fading duration from hover
+    @links-aniduration: .3s; //fading duration from hover
 }
 ```
 
@@ -47,10 +47,10 @@ Rewrite basic parameters:
 @import (less) "node_modules/links.less/links.less";
 
 .links-settings() {
-    @class: pseudolink; //you can rename that classname
-    @text-decoration: none;
-    @roundness: 0;
-    @focuswidth: 3px;
-    @aniduration: .5s;
+    @links-class: pseudolink; //you can rename that classname
+    @links-text-decoration: none;
+    @links-roundness: 0;
+    @links-focuswidth: 3px;
+    @links-aniduration: .5s;
 }
 ```

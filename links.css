@@ -1,4 +1,4 @@
-/*! links.less v0.0.1 | MIT License | github.com/paulradzkov/links.less */
+/*! links.less v0.0.2 | MIT License | github.com/paulradzkov/links.less */
 a,
 .link {
   text-decoration: underline;
@@ -20,8 +20,18 @@ a:hover,
   color: #2b9aff;
   text-decoration-color: rgba(43, 154, 255, 0.3);
 }
+a:focus,
+.link:focus {
+  color: #2b9aff;
+  text-decoration-color: rgba(43, 154, 255, 0.3);
+}
 a:visited:hover,
 .link:visited:hover {
+  color: #bc4df8;
+  text-decoration-color: rgba(188, 77, 248, 0.3);
+}
+a:visited:focus,
+.link:visited:focus {
   color: #bc4df8;
   text-decoration-color: rgba(188, 77, 248, 0.3);
 }
@@ -39,15 +49,14 @@ a:not([class]):link,
 .link:visited,
 a:not([class]):visited {
   border-radius: 0.125em;
-  transition: color 0.3s ease-out, background-color 0.3s ease-out, border-color 0.3s ease-out, box-shadow 0.3s ease-out;
+  transition: color 0.3s ease-out, background-color 0.3s ease-out, border-color 0.3s ease-out, box-shadow 0.3s ease-out, text-decoration-color 0.3s ease-out;
 }
 .link:hover,
 a:not([class]):hover {
-  transition: color 0s, background-color 0s, border-color 0s, box-shadow 0s;
+  transition: color 0s, background-color 0s, border-color 0s, box-shadow 0s, text-decoration-color 0s;
 }
-.link:focus:not(:hover),
-a:not([class]):focus:not(:hover) {
-  color: #2b9aff;
+.link:focus,
+a:not([class]):focus {
   background: rgba(43, 154, 255, 0.2);
   box-shadow: 0 0 0 0.1875em rgba(43, 154, 255, 0.2);
   outline: none;
