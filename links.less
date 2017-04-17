@@ -1,4 +1,4 @@
-/*! links.less v0.0.2 | MIT License | github.com/paulradzkov/links.less */
+/*! links.less v0.0.3 | MIT License | github.com/paulradzkov/links.less */
 
 .links-settings() {
     @links-class: link; //you can rename that classname
@@ -7,39 +7,200 @@
     @links-focuswidth: 0.1875em; // default = 3px
     //colors
     @links-link:          #0877db;
-    @links-visited:       #9108db;
     @links-hover:         #2b9aff;
+    @links-visited:       #9108db;
     @links-visitedhover:  #bc4df8;
     @links-active:        #bc4df8;
+    @links-fadeout: 75%;
     //animation
     @links-aniduration: .3s; //fading duration from hover
+}
+
+// global coloring mixin
+.links-color(@links-link) {
+    @fadeout: 75%;
+
+    &,
+    &:link,
+    &:visited,
+    &:hover,
+    &:focus,
+    &:visited:hover,
+    &:visited:focus,
+    &:active {
+        color: @links-link;
+        & when (iscolor(@links-link)) {
+            text-decoration-color: fadeout(@links-link, @fadeout);
+        }
+    }
+}
+
+.links-color(@links-link, @links-hover) {
+    @fadeout: 75%;
+
+    &,
+    &:link,
+    &:visited {
+        color: @links-link;
+        & when (iscolor(@links-link)) {
+            text-decoration-color: fadeout(@links-link, @fadeout);
+        }
+    }
+
+    &:hover,
+    &:focus,
+    &:visited:hover,
+    &:visited:focus,
+    &:active {
+        color: @links-hover;
+        & when (iscolor(@links-hover)) {
+            text-decoration-color: fadeout(@links-hover, @fadeout);
+        }
+    }
+}
+
+.links-color(@links-link, @links-hover, @links-visited) {
+    @fadeout: 75%;
+
+    &,
+    &:link {
+        color: @links-link;
+        & when (iscolor(@links-link)) {
+            text-decoration-color: fadeout(@links-link, @fadeout);
+        }
+    }
+
+    &:visited,
+    &:active {
+        color: @links-visited;
+        & when (iscolor(@links-visited)) {
+            text-decoration-color: fadeout(@links-visited, @fadeout);
+        }
+    }
+
+    &:hover,
+    &:focus,
+    &:visited:hover,
+    &:visited:focus {
+        color: @links-hover;
+        & when (iscolor(@links-hover)) {
+            text-decoration-color: fadeout(@links-hover, @fadeout);
+        }
+    }
+}
+
+.links-color(@links-link, @links-hover, @links-visited, @links-active) {
+    @fadeout: 75%;
+
+    &,
+    &:link {
+        color: @links-link;
+        & when (iscolor(@links-link)) {
+            text-decoration-color: fadeout(@links-link, @fadeout);
+        }
+    }
+
+    &:visited {
+        color: @links-visited;
+        & when (iscolor(@links-visited)) {
+            text-decoration-color: fadeout(@links-visited, @fadeout);
+        }
+    }
+
+    &:hover,
+    &:focus,
+    &:visited:hover,
+    &:visited:focus {
+        color: @links-hover;
+        & when (iscolor(@links-hover)) {
+            text-decoration-color: fadeout(@links-hover, @fadeout);
+        }
+    }
+
+    &:active {
+        color: @links-active;
+        & when (iscolor(@links-active)) {
+            text-decoration-color: fadeout(@links-active, @fadeout);
+        }
+    }
+}
+
+.links-color(@links-link, @links-hover, @links-visited,  @links-visitedhover, @links-active, @fadeout: 75%) {
+
+    &,
+    &:link {
+        color: @links-link;
+        & when (iscolor(@links-link)) {
+            text-decoration-color: fadeout(@links-link, @fadeout);
+        }
+    }
+
+    &:visited {
+        color: @links-visited;
+        & when (iscolor(@links-visited)) {
+            text-decoration-color: fadeout(@links-visited, @fadeout);
+        }
+    }
+
+    &:hover,
+    &:focus {
+        color: @links-hover;
+        & when (iscolor(@links-hover)) {
+            text-decoration-color: fadeout(@links-hover, @fadeout);
+        }
+    }
+
+    &:visited:hover,
+    &:visited:focus {
+        color: @links-visitedhover;
+        & when (iscolor(@links-visitedhover)) {
+            text-decoration-color: fadeout(@links-visitedhover, @fadeout);
+        }
+    }
+
+    &:active {
+        color: @links-active;
+        & when (iscolor(@links-active)) {
+            text-decoration-color: fadeout(@links-active, @fadeout);
+        }
+    }
 }
 
 @links-render: {
 
     a,
-    .@{links-class} {
+    .@{links-class},
+    .@{links-class}-novisited,
+    .@{links-class}-inherit {
         text-decoration: @links-text-decoration;
         text-decoration-line: @links-text-decoration;
         text-decoration-style: solid;
-
-        &:link          {color: @links-link;          text-decoration-color: fadeout(@links-link,        70%);}
-        &:visited       {color: @links-visited;       text-decoration-color: fadeout(@links-visited,     70%);}
-        &:hover         {color: @links-hover;         text-decoration-color: fadeout(@links-hover,       70%);}
-        &:focus         {color: @links-hover;         text-decoration-color: fadeout(@links-hover,       70%);}
-        &:visited:hover {color: @links-visitedhover;  text-decoration-color: fadeout(@links-visitedhover,70%);}
-        &:visited:focus {color: @links-visitedhover;  text-decoration-color: fadeout(@links-visitedhover,70%);}
-        &:active        {color: @links-active;        text-decoration-color: fadeout(@links-active,      70%);}
 
         img:only-child {
             vertical-align: top;
         }
     }
 
+    a,
+    .@{links-class} {
+        .links-color(@links-link, @links-hover, @links-visited,  @links-visitedhover, @links-active, @links-fadeout);
+    }
 
-    // apply animation only for .link and unstyled links
+    .@{links-class}-novisited {
+        .links-color(@links-link, @links-hover, @links-link,  @links-hover, @links-active, @links-fadeout);
+    }
+
+    .@{links-class}-inherit {
+        .links-color(inherit, @links-hover, inherit, @links-visitedhover, @links-active, @links-fadeout);
+    }
+
+    // apply animation only for .link* and unstyled links
     .@{links-class},
+    .@{links-class}-novisited,
+    .@{links-class}-inherit,
     a:not([class]) {
+
+        &,
         &:link,
         &:visited {
             border-radius: @links-roundness;
@@ -66,6 +227,15 @@
             box-shadow: 0 0 0 @links-focuswidth fadeout(@links-hover, 80%);
             outline: none;
         }
+    }
+
+    .@{links-class}:not(a),
+    .@{links-class}-novisited:not(a),
+    .@{links-class}-inherit:not(a) {
+        cursor: pointer;
+        background-color: unset;
+        border-style: unset;
+        padding: unset;
     }
 
     .links-settings();

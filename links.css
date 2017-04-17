@@ -1,63 +1,127 @@
-/*! links.less v0.0.2 | MIT License | github.com/paulradzkov/links.less */
+/*! links.less v0.0.3 | MIT License | github.com/paulradzkov/links.less */
 a,
-.link {
+.link,
+.link-novisited,
+.link-inherit {
   text-decoration: underline;
   text-decoration-line: underline;
   text-decoration-style: solid;
 }
+a img:only-child,
+.link img:only-child,
+.link-novisited img:only-child,
+.link-inherit img:only-child {
+  vertical-align: top;
+}
+a,
+.link,
 a:link,
 .link:link {
   color: #0877db;
-  text-decoration-color: rgba(8, 119, 219, 0.3);
+  text-decoration-color: rgba(8, 119, 219, 0.25);
 }
 a:visited,
 .link:visited {
   color: #9108db;
-  text-decoration-color: rgba(145, 8, 219, 0.3);
+  text-decoration-color: rgba(145, 8, 219, 0.25);
 }
 a:hover,
-.link:hover {
-  color: #2b9aff;
-  text-decoration-color: rgba(43, 154, 255, 0.3);
-}
+.link:hover,
 a:focus,
 .link:focus {
   color: #2b9aff;
-  text-decoration-color: rgba(43, 154, 255, 0.3);
+  text-decoration-color: rgba(43, 154, 255, 0.25);
 }
 a:visited:hover,
-.link:visited:hover {
-  color: #bc4df8;
-  text-decoration-color: rgba(188, 77, 248, 0.3);
-}
+.link:visited:hover,
 a:visited:focus,
 .link:visited:focus {
   color: #bc4df8;
-  text-decoration-color: rgba(188, 77, 248, 0.3);
+  text-decoration-color: rgba(188, 77, 248, 0.25);
 }
 a:active,
 .link:active {
   color: #bc4df8;
-  text-decoration-color: rgba(188, 77, 248, 0.3);
+  text-decoration-color: rgba(188, 77, 248, 0.25);
 }
-a img:only-child,
-.link img:only-child {
-  vertical-align: top;
+.link-novisited,
+.link-novisited:link {
+  color: #0877db;
+  text-decoration-color: rgba(8, 119, 219, 0.25);
 }
+.link-novisited:visited {
+  color: #0877db;
+  text-decoration-color: rgba(8, 119, 219, 0.25);
+}
+.link-novisited:hover,
+.link-novisited:focus {
+  color: #2b9aff;
+  text-decoration-color: rgba(43, 154, 255, 0.25);
+}
+.link-novisited:visited:hover,
+.link-novisited:visited:focus {
+  color: #2b9aff;
+  text-decoration-color: rgba(43, 154, 255, 0.25);
+}
+.link-novisited:active {
+  color: #bc4df8;
+  text-decoration-color: rgba(188, 77, 248, 0.25);
+}
+.link-inherit,
+.link-inherit:link {
+  color: inherit;
+}
+.link-inherit:visited {
+  color: inherit;
+}
+.link-inherit:hover,
+.link-inherit:focus {
+  color: #2b9aff;
+  text-decoration-color: rgba(43, 154, 255, 0.25);
+}
+.link-inherit:visited:hover,
+.link-inherit:visited:focus {
+  color: #bc4df8;
+  text-decoration-color: rgba(188, 77, 248, 0.25);
+}
+.link-inherit:active {
+  color: #bc4df8;
+  text-decoration-color: rgba(188, 77, 248, 0.25);
+}
+.link,
+.link-novisited,
+.link-inherit,
+a:not([class]),
 .link:link,
+.link-novisited:link,
+.link-inherit:link,
 a:not([class]):link,
 .link:visited,
+.link-novisited:visited,
+.link-inherit:visited,
 a:not([class]):visited {
   border-radius: 0.125em;
   transition: color 0.3s ease-out, background-color 0.3s ease-out, border-color 0.3s ease-out, box-shadow 0.3s ease-out, text-decoration-color 0.3s ease-out;
 }
 .link:hover,
+.link-novisited:hover,
+.link-inherit:hover,
 a:not([class]):hover {
   transition: color 0s, background-color 0s, border-color 0s, box-shadow 0s, text-decoration-color 0s;
 }
 .link:focus,
+.link-novisited:focus,
+.link-inherit:focus,
 a:not([class]):focus {
   background: rgba(43, 154, 255, 0.2);
   box-shadow: 0 0 0 0.1875em rgba(43, 154, 255, 0.2);
   outline: none;
+}
+.link:not(a),
+.link-novisited:not(a),
+.link-inherit:not(a) {
+  cursor: pointer;
+  background-color: unset;
+  border-style: unset;
+  padding: unset;
 }
