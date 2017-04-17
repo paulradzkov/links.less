@@ -1,6 +1,6 @@
 {
   "name": "links.less",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Configurable LESS module for links rendering",
   "author": "Paul Radzkov <radzkov@gmail.com>",
   "repository": {
