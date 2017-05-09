@@ -1,4 +1,4 @@
-/*! links.less v0.0.3 | MIT License | github.com/paulradzkov/links.less */
+/*! links.less v0.0.4 | MIT License | github.com/paulradzkov/links.less */
 
 .links-settings() {
     @links-class: link; //you can rename that classname
@@ -181,7 +181,7 @@
         }
     }
 
-    a,
+    a:not([class]),
     .@{links-class} {
         .links-color(@links-link, @links-hover, @links-visited,  @links-visitedhover, @links-active, @links-fadeout);
     }
