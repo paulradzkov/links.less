@@ -1,4 +1,4 @@
-/*! links.less v0.0.4 | MIT License | github.com/paulradzkov/links.less */
+/*! links.less v0.0.5 | MIT License | github.com/paulradzkov/links.less */
 a,
 .link,
 .link-novisited,
@@ -6,6 +6,7 @@ a,
   text-decoration: underline;
   text-decoration-line: underline;
   text-decoration-style: solid;
+  text-decoration-skip: ink;
 }
 a img:only-child,
 .link img:only-child,

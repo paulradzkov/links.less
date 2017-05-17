@@ -12,9 +12,9 @@ Configurable css module for rendering links.
 
 or use compiled version from CDN
 
-`https://unpkg.com/links.less@0.0.4/links.css`  
-`https://unpkg.com/links.less@0.0.4/links.min.css`  
-`https://unpkg.com/links.less@0.0.4/links.min.css.map`
+`https://unpkg.com/links.less@0.0.5/links.css`  
+`https://unpkg.com/links.less@0.0.5/links.min.css`  
+`https://unpkg.com/links.less@0.0.5/links.min.css.map`
 
 
 ## Usage in HTML
