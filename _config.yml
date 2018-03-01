@@ -1,0 +1,10 @@
+title: links.less
+author: Paul Radzkov
+email: radzkov@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Configurable css module for rendering links.
+# twitter_username: paul_radzkov
+github_username: paulradzkov
+google_analytics: UA-29416794-1
+remote_theme: paulradzkov/docs-template
+github_link: https://github.com/paulradzkov/links.less
