@@ -1,6 +1,7 @@
 # links.less
 
 [![npm version](https://badge.fury.io/js/links.less.svg)](https://badge.fury.io/js/links.less) [![bower version](https://badge.fury.io/bo/links.less.svg)](https://badge.fury.io/bo/links.less)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fpaulradzkov%2Flinks.less.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fpaulradzkov%2Flinks.less?ref=badge_shield)
 
 Configurable css module for rendering links.
 
@@ -131,3 +132,7 @@ You can pass from 1 to 6 arguments to mixin. See the mapping scheme:
 ```
 
 The last one `@fadeout` by default has value 75% and refers to amount of transparency added to underline.
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fpaulradzkov%2Flinks.less.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fpaulradzkov%2Flinks.less?ref=badge_large)
